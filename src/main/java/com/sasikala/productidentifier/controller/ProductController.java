@@ -32,4 +32,11 @@ public class ProductController {
         return productService.deleteProductById(id);
     }
 
+    @PostMapping (value = "/product")
+    public String saveProduct(@RequestBody Product product) {
+         productService.saveProduct(product);
+         return "successfully posted product";
+
+    }
+
 }
